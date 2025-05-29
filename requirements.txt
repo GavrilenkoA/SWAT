@@ -12,7 +12,7 @@ cycler==0.12.1
 debugpy==1.8.9
 decorator==5.1.1
 einops==0.8.0
-esm==3.1.1
+esm==3.1.2
 et_xmlfile==2.0.0
 exceptiongroup==1.2.2
 executing==2.1.0
