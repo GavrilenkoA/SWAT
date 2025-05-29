@@ -140,11 +140,7 @@ def extract_mean_representations(model, df):
     with torch.no_grad():  # Disable gradient calculations
         for batch_ids, batch_lengths, batch_tokens in tqdm(data_loader, desc="Processing batches", leave=False):
             output = model(batch_tokens)
-            logits, embeddings, hiddens = (
-                output.sequence_logits,
-                output.embeddings,
-                output.hidden_states,
-            )
+            embeddings = output.embeddings
 
             for i, ID in enumerate(batch_ids):
             # Extract the last hidden states for the sequence
