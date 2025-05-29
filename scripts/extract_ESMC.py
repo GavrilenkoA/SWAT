@@ -4,7 +4,6 @@ import argparse
 from Bio import SeqIO
 from tqdm import tqdm
 from esm.models.esmc import ESMC
-from esm.tokenization import get_esmc_model_tokenizers
 import pandas as pd
 
 

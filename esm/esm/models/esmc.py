@@ -204,7 +204,6 @@ class ESMC(nn.Module, ESMCInferenceClient):
 
         with (
             torch.no_grad(),
-            #torch.autocast(enabled=True, device_type=device.type, dtype=torch.bfloat16)  # type: ignore
             torch.autocast(enabled=False, device_type=device.type, dtype=torch.float32)  # type: ignore
             if device.type == "cuda"
             else contextlib.nullcontext(),
